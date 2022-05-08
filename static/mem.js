@@ -1,4 +1,8 @@
+document.addEventListener('contextmenu', event => event.preventDefault(alert("Right Click Disabled! Please Do not Try to Cheat"))); // Disabling Right click
 const cards = document.querySelectorAll('.memory-card');
+const modal = document.getElementById("modal")
+let correctCount = 0;
+maxCount = 2;
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -30,7 +34,7 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
-
+  correctCount += 1;
   resetBoard();
 }
 
@@ -48,6 +52,15 @@ function unflipCards() {
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
+  if(correctCount == maxCount){
+    // alert("Game over")
+    modal.style.opacity = 1;
+    modal.style.transform = "all 300ms ease-in-out";
+    setTimeout(() => {
+      window.location.href = "/challenge2"
+    }, 5000)
+  }
+  // console.log(correctCount)
 }
 
 (function shuffle() {
