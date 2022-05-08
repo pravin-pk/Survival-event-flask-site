@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Memory Game</title>
+
+  <link rel="stylesheet" href="static/mem.css">
+</head>
+<body>
+
+  <section class="memory-game">
+    {% set count = namespace(value=0) %}
+    {% for logo in logos %}
+    <div class="memory-card" data-framework="{{ count.value }}">
+        <img class="front-face" src="static/images/{{logo}}" alt="logo" />
+        <img class="back-face" src="static/images/gonhxh.png" alt="hxh card" />
+    </div>
+    <div class="memory-card" data-framework="{{ count.value }}">
+        <img class="front-face" src="static/images/{{logo}}" alt="logo" />
+        <img class="back-face" src="static/images/gonhxh.png" alt="hxh card" />
+    </div>
+    {% set count.value = count.value + 1 %}
+    {% endfor %}
+  </section> 
+
+  <script src="static/mem.js"></script>
+</body>
+</html>

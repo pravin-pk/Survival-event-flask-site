@@ -6,9 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template("homepage.html")
 
-@app.route("/memoryGame")
+@app.route("/challenge1")
 def memoryGame():
-    pass
+    img = ['c.svg','cpp.svg','csharp.svg','css.svg','go.svg','html.svg','java.svg','javascript.svg','php.svg','python.svg','ruby.svg','swift.svg','typescript.svg','haskell.svg''kotlin.svg','lua.svg']
+    return render_template("mem.html", logos = img[:10])
 
 
 if __name__ == "__main__":
