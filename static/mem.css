@@ -80,19 +80,19 @@
     position: relative;
     display: block;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 4px;
     overflow: hidden;
     padding-bottom: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
       -ms-flex-item-align: center;
       align-self: center;
       box-shadow: 0 12px 25px 0 rgba(199,175,189,.25);
     opacity: 1;
-    transform: scale(0.6);
+    transform: scale(0.8);
     transition: opacity 250ms 250ms ease, transform 300ms 250ms ease;
   }
   .modal-wrap img {
@@ -106,7 +106,7 @@
   }
 
   /* From uiverse.io by @adamgiebl */
-button {
+/* button {
   display: flex;
   align-items: center;
   font-family: inherit;
@@ -137,4 +137,4 @@ button {
  
  button:hover span {
   transform: translateX(7px);
- }
+ } */

@@ -2,7 +2,7 @@ document.addEventListener('contextmenu', event => event.preventDefault(alert("Ri
 const cards = document.querySelectorAll('.memory-card');
 const modal = document.getElementById("modal")
 let correctCount = 0;
-maxCount = 2;
+maxCount = 1;
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -56,9 +56,9 @@ function resetBoard() {
     // alert("Game over")
     modal.style.opacity = 1;
     modal.style.transform = "all 300ms ease-in-out";
-    setTimeout(() => {
-      window.location.href = "/challenge2"
-    }, 5000)
+    // setTimeout(() => {
+    //   window.location.href = "/challenge2"
+    // }, 5000)
   }
   // console.log(correctCount)
 }

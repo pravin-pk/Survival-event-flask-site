@@ -9,7 +9,7 @@ def home():
 @app.route("/challenge1")
 def memoryGame():
     img = ['c.svg','cpp.svg','csharp.svg','css.svg','go.svg','html.svg','java.svg','javascript.svg','php.svg','python.svg','ruby.svg','swift.svg','typescript.svg','haskell.svg''kotlin.svg','lua.svg']
-    return render_template("mem.html", logos = img[:2])
+    return render_template("mem.html", logos = img[:1])
 
 
 if __name__ == "__main__":
