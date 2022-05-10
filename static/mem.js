@@ -56,9 +56,9 @@ function resetBoard() {
     // alert("Game over")
     modal.style.opacity = 1;
     modal.style.transform = "all 300ms ease-in-out";
-    // setTimeout(() => {
-    //   window.location.href = "/challenge2"
-    // }, 5000)
+    setTimeout(() => {
+      window.location.href = "/challenge2"
+    }, 5000)
   }
   // console.log(correctCount)
 }
@@ -69,5 +69,23 @@ function resetBoard() {
     card.style.order = randomPos;
   });
 })();
+
+document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
