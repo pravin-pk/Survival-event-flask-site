@@ -26,7 +26,7 @@ continue_btn.onclick = ()=>{
     quiz_box.classList.add("activeQuiz"); //show quiz box
     showQuetions(0); //calling showQestions function
     queCounter(1); //passing 1 parameter to queCounter
-    startTimer(15); //calling startTimer function
+    // startTimer(15); //calling startTimer function
     startTimerLine(0); //calling startTimerLine function
 }
 
@@ -54,7 +54,7 @@ restart_quiz.onclick = ()=>{
     queCounter(que_numb); //passing que_numb value to queCounter
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
-    startTimer(timeValue); //calling startTimer function
+    // startTimer(timeValue); //calling startTimer function
     startTimerLine(widthValue); //calling startTimerLine function
     timeText.textContent = "Time Left"; //change the text of timeText to Time Left
     next_btn.classList.remove("show"); //hide the next button
@@ -77,10 +77,11 @@ next_btn.onclick = ()=>{
         queCounter(que_numb); //passing que_numb value to queCounter
         clearInterval(counter); //clear counter
         clearInterval(counterLine); //clear counterLine
-        startTimer(timeValue); //calling startTimer function
+        // startTimer(timeValue); //calling startTimer function
         startTimerLine(widthValue); //calling startTimerLine function
-        timeText.textContent = "Time Left"; //change the timeText to Time Left
-        next_btn.classList.remove("show"); //hide the next button
+        // timeText.textContent = "Time Left"; //change the timeText to Time Left
+        // next_btn.classList.remove("show"); //hide the next button
+        next_btn.classList.remove("show");
     }else{
         clearInterval(counter); //clear counter
         clearInterval(counterLine); //clear counterLine
