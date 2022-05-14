@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, url_for, redirect, request
 
 app = Flask(__name__)
 
@@ -6,8 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template("homepage.html")
 
-@app.route("/challenge1")
+@app.route("/challenge1", methods = ["POST", "GET"])
 def memoryGame():
+    if request.method != 'POST':
+        return redirect('/')
     img = ['c.svg','cpp.svg','csharp.svg','css.svg','go.svg','html.svg','java.svg','javascript.svg','php.svg','python.svg','ruby.svg','swift.svg','typescript.svg','haskell.svg''kotlin.svg','lua.svg']
     return render_template("mem.html", logos = img[:1])
 
