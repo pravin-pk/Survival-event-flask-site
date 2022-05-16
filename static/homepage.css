@@ -24,12 +24,13 @@ body {
     }
   }
 
-  h1 {
+  .heading {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
     animation-duration: 1.5s;
+    animation-direction: normal;
     animation-name: moveCenter;
   }
   
