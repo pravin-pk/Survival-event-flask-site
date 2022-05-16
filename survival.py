@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import Flask, render_template, url_for, redirect, request, session
 import sqlite3
 from flask_sqlalchemy import SQLAlchemy
@@ -17,10 +18,12 @@ class Participants(db.Model):
     id_ = db.Column("id_", db.Integer, primary_key = true)
     teamName = db.Column("TEAMNAME", db.String(50))
     scores = db.Column("SCORES", db.Integer)
+    time = db.Column("TIME", db.String(10))
 
-    def __init__(self, teamName, score):
+    def __init__(self, teamName, score, time):
         self.teamName = teamName
         self.scores = score
+        self.time = time
 
 @app.route("/")
 def login():
@@ -40,10 +43,21 @@ def memoryGame():
     img = ['c.svg','cpp.svg','csharp.svg','css.svg','go.svg','html.svg','java.svg','javascript.svg','php.svg','python.svg','ruby.svg','swift.svg','typescript.svg','haskell.svg''kotlin.svg','lua.svg']
     return render_template("mem.html", logos = img[:1])
 
-@app.route("/challenge2")
+@app.route("/challenge2", methods = ["GET", "POST"])
 def quiz():
-    return render_template("quiz.html")
+    if request.method != 'POST':
+        return render_template("quiz.html")
 
+    scores = request.form.get("scores")
+    # print(scores)
 
+    p = Participants(teamName = session["teamName"],
+                    score = request.form.get('scores'),
+                    time = datetime.now().strftime("%H:%M:%S"))
+    db.session.add(p)
+    db.session.commit()
+
+    return redirect(url_for("quiz"))
 if __name__ == "__main__":
+    db.create_all() # creates a db if it does not exists
     app.run(debug=True)
