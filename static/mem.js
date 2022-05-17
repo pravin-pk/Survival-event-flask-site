@@ -58,7 +58,7 @@ function resetBoard() {
     modal.style.transform = "all 300ms ease-in-out";
     setTimeout(() => {
       window.location.href = "/challenge2"
-    }, 5000)
+    }, 8000)
   }
   // console.log(correctCount)
 }

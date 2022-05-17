@@ -2,6 +2,7 @@ from datetime import datetime
 from flask import Flask, render_template, url_for, redirect, request, session
 import sqlite3
 from flask_sqlalchemy import SQLAlchemy
+import webbrowser
 from sqlalchemy import true
 
 app = Flask(__name__)
@@ -25,25 +26,24 @@ class Participants(db.Model):
         self.scores = score
         self.time = time
 
-@app.route("/test")
+@app.route("/login", methods=['GET','POST'])
 def login():
-    session.clear()
+    if request.method == 'POST':
+        session["teamName"] = request.form.get("teamName")
+        print(session["teamName"])
+        return redirect(url_for('memoryGame'))
+
     return render_template("login.html")
 
 @app.route("/", methods = ["GET", "POST"])
 def home():
-    if request.method != "POST":
-        return render_template("homepage.html")
-
-
-    return redirect(url_for("memoryGame"))
+    session.clear()
+    return render_template("homepage.html")
 
 @app.route("/challenge1", methods = ["POST", "GET"])
 def memoryGame():
-    if request.method != 'POST':
-        return redirect('/')
-    session["teamName"] = request.form.get("teamName")
-    print(session["teamName"])
+    # if request.method != 'POST':
+    #     return redirect('/')
     img = ['c.svg','cpp.svg','csharp.svg','css.svg','go.svg','html.svg','java.svg','javascript.svg','php.svg','python.svg','ruby.svg','swift.svg','typescript.svg','haskell.svg''kotlin.svg','lua.svg']
     return render_template("mem.html", logos = img[:1])
 
@@ -61,7 +61,14 @@ def quiz():
     db.session.add(p)
     db.session.commit()
 
-    return redirect(url_for("quiz"))
+    webbrowser.open_new_tab("https://www.hackerrank.com/survival-round-1")
+
+    return redirect(url_for("links"))
+
+@app.route("/links")
+def links():
+    return "<script> alert('Hello world'); </script>"
+
 if __name__ == "__main__":
     db.create_all() # creates a db if it does not exists
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True)

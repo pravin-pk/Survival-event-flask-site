@@ -7,7 +7,7 @@
   body {
     height: 100vh;
     display: flex;
-    background: #007bff;
+    background: #3c3b3b;
   }
   
   .memory-game {
@@ -46,7 +46,7 @@
     padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: #3b3eec;
+    background: #ffd700;
     backface-visibility: hidden;
   }
   

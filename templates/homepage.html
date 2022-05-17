@@ -28,18 +28,18 @@
     <br><br>
     <section>
         <div class="gamestart">
-            <form action="/challenge1" method="post">
-                <input type="text" id="teamName" name="teamName" hidden>
+            <form action="/login" method="get">
+                <!-- <input type="text" id="teamName" name="teamName" hidden> -->
                 <button class="learn-more">
                     <span class="circle" aria-hidden="true">
                     <span class="icon arrow"></span>
                     </span>
-                    <span class="button-text" onclick="promptTeam();">Let's Begin</span>
+                    <span class="button-text">Let's Begin</span>
                   </button>
             </form>
         </div>
     </section>
-    <script>
+    <!-- <script>
         function promptTeam() {
 
             let person = prompt("Please enter your Team Name", "John Doe");
@@ -49,6 +49,6 @@
             document.getElementById("teamName").value = person
             }
         }
-    </script>
+    </script> -->
 </body>
 </html>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/login.css">
     <title>Session login</title>
 </head>
@@ -12,17 +13,17 @@
     <div class="container">
         <div class="screen">
             <div class="screen__content">
-                <form class="login" action="/home" method="post">
+                <form class="login" action="/login" method="post">
                     <div class="login__field">
                         <i class="login__icon fas fa-user"></i>
                         <input type="text" class="login__input" placeholder="Team name" name="teamName" id="teamName">
                     </div>
-                    <div class="login__field">
+                    <!-- <div class="login__field">
                         <i class="login__icon fas fa-lock"></i>
                         <input type="password" class="login__input" placeholder="Password">
-                    </div>
+                    </div> -->
                     <button class="button login__submit">
-                        <span class="button__text">Log In Now</span>
+                        <span class="button__text">Let The Hunt Begin</span>
                         <i class="button__icon fas fa-chevron-right"></i>
                     </button>				
                 </form>
