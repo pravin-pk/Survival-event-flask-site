@@ -25,21 +25,25 @@ class Participants(db.Model):
         self.scores = score
         self.time = time
 
-@app.route("/")
+@app.route("/test")
 def login():
     session.clear()
     return render_template("login.html")
 
-@app.route("/home", methods = ["GET", "POST"])
+@app.route("/", methods = ["GET", "POST"])
 def home():
-    session["teamName"] = request.form.get("teamName")
-    print(session["teamName"])
-    return render_template("homepage.html")
+    if request.method != "POST":
+        return render_template("homepage.html")
+
+
+    return redirect(url_for("memoryGame"))
 
 @app.route("/challenge1", methods = ["POST", "GET"])
 def memoryGame():
     if request.method != 'POST':
         return redirect('/')
+    session["teamName"] = request.form.get("teamName")
+    print(session["teamName"])
     img = ['c.svg','cpp.svg','csharp.svg','css.svg','go.svg','html.svg','java.svg','javascript.svg','php.svg','python.svg','ruby.svg','swift.svg','typescript.svg','haskell.svg''kotlin.svg','lua.svg']
     return render_template("mem.html", logos = img[:1])
 
