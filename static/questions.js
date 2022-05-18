@@ -2,24 +2,24 @@
 let questions = [
     {
     numb: 1,
-    question: "What does HTML stand for?",
-    answer: "Hyper Text Markup Language",
+    question: "Which part of database holds only one type of information?",
+    answer: "Field",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
+      "Report",
+      "Field",
+      "Record",
+      "File"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: ".mov is what kind of extention?",
+    answer: "Video",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "Video",
+      "Audio",
+      "image",
+      "word"
     ]
   },
     {
@@ -35,24 +35,24 @@ let questions = [
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "The first web browser",
+    answer: "Nexus",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "Internet Explorer",
+      "Mozilla Firefox",
+      "Mosaic",
+      "Nexus"
     ]
   },
     {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "How many layers OSI model has?",
+    answer: "7",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "6",
+      "9",
+      "7",
+      "5"
     ]
   },
   // you can uncomment the below codes and make duplicate as more as you want to add question
@@ -60,7 +60,7 @@ let questions = [
 
     {
     numb: 6,
-    question: "Number of girlfriedn PK has?",
+    question: ".gif is what kind if extention?",
     answer: "0",
     options: [
       "0",
