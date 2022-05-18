@@ -24,13 +24,13 @@ let questions = [
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "int main()\n{\n\tint var = O52;\n\tprintf(\"%d\",var);\n}",
+    answer: "42",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "52",
+      "60",
+      "42",
+      "44"
     ]
   },
     {
@@ -46,7 +46,7 @@ let questions = [
   },
     {
     numb: 5,
-    question: "How many layers OSI model has?",
+    question: "How many layers does OSI model have?",
     answer: "7",
     options: [
       "6",
@@ -71,7 +71,7 @@ let questions = [
   },
   {
     numb: 7,
-    question: "A folder in windows computer cannot be created with this name",
+    question: "A folder in Windows computer cannot be created with this name",
     answer: "con",
     options: [
       "mkdir",
