@@ -18,8 +18,8 @@ let questions = [
     options: [
       "Video",
       "Audio",
-      "image",
-      "word"
+      "Image",
+      "Word"
     ]
   },
     {
@@ -60,13 +60,85 @@ let questions = [
 
     {
     numb: 6,
-    question: ".gif is what kind if extention?",
-    answer: "0",
+    question: ".gif is what kind of extention?",
+    answer: "Image",
     options: [
-      "0",
-      "1",
-      "2",
-      "1/2"
+      "Video",
+      "Image",
+      "Text",
+      "Word"
     ]
   },
+  {
+    numb: 7,
+    question: "A folder in windows computer cannot be created with this name",
+    answer: "con",
+    options: [
+      "mkdir",
+      "con",
+      "rep",
+      "ese"
+    ]
+  },
+  {
+    numb: 8,
+    question: "How many options are available in facebook to react to a post? ",
+    answer: "6",
+    options: [
+      "7",
+      "6",
+      "5",
+      "4"
+    ]
+  },
+
+  {
+    numb: 9,
+    question: "Which is the virtual assistant of facebook ",
+    answer: "M",
+    options: [
+      "M",
+      "Bookme",
+      "Cortana",
+      "BigB"
+    ]
+  },
+
+  {
+    numb: 10,
+    question: "Colour of Blackbox",
+    answer: "Orange",
+    options: [
+      "Orange",
+      "Black",
+      "White",
+      "Red"
+    ]
+  },
+
+  {
+    numb: 11,
+    question: "Current stable version of Google",
+    answer: "101",
+    options: [
+      "100",
+      "101",
+      "102",
+      "103"
+    ]
+  },
+
+  {
+    numb: 12,
+    question: "ASCII value of 'A'",
+    answer: "65",
+    options: [
+      "97",
+      "67",
+      "65",
+      "95"
+    ]
+  },
+
+  
 ];
