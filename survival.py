@@ -75,4 +75,4 @@ def links():
 
 if __name__ == "__main__":
     db.create_all() # creates a db if it does not exists
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
