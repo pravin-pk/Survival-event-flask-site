@@ -18,11 +18,15 @@ class Participants(db.Model):
     __tablename__ = "PARTICIPANTS"
     id_ = db.Column("id_", db.Integer, primary_key = true)
     teamName = db.Column("TEAMNAME", db.String(50))
+    member1 = db.Column("MEMBER1", db.String(50))
+    member2 = db.Column("MEMBER2", db.String(50))
     scores = db.Column("SCORES", db.Integer)
     time = db.Column("TIME", db.String(10))
 
-    def __init__(self, teamName, score, time):
+    def __init__(self, teamName, member1, member2, score, time):
         self.teamName = teamName
+        self.member1 = member1
+        self.member2 = member2
         self.scores = score
         self.time = time
 
@@ -30,7 +34,8 @@ class Participants(db.Model):
 def login():
     if request.method == 'POST':
         session["teamName"] = request.form.get("teamName")
-        print(session["teamName"])
+        session["member1"] = request.form.get("member1")
+        session["member2"] = request.form.get("member2")
         return redirect(url_for('memoryGame'))
 
     return render_template("login.html")
@@ -56,6 +61,8 @@ def quiz():
     # print(scores)
 
     p = Participants(teamName = session["teamName"],
+                    member1 = session["member1"],
+                    member2 = session["member2"],
                     score = request.form.get('scores'),
                     time = datetime.now().strftime("%H:%M:%S"))
     db.session.add(p)
