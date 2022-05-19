@@ -24,7 +24,7 @@ let questions = [
   },
     {
     numb: 3,
-    question: "int main()\n{\n\tint var = O52;\n\tprintf(\"%d\",var);\n}",
+    question: "int main()\n{\n\tint var = 052;\n\tprintf(\"%d\",var);\n}",
     answer: "42",
     options: [
       "52",
