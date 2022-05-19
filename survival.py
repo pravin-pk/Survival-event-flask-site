@@ -45,7 +45,7 @@ def memoryGame():
     # if request.method != 'POST':
     #     return redirect('/')
     img = ['c.svg','cpp.svg','csharp.svg','css.svg','go.svg','html.svg','java.svg','javascript.svg','php.svg','python.svg','ruby.svg','swift.svg','typescript.svg','haskell.svg''kotlin.svg','lua.svg']
-    return render_template("mem.html", logos = img[:10])
+    return render_template("mem.html", logos = img[:1])
 
 @app.route("/challenge2", methods = ["GET", "POST"])
 def quiz():
@@ -63,11 +63,15 @@ def quiz():
 
     webbrowser.open_new_tab("https://www.hackerrank.com/survival-round-1")
 
-    return redirect(url_for("links"))
+    return redirect(url_for("round2"))
+
+@app.route("/round2")
+def round2():
+    return render_template("round2.html")
 
 @app.route("/links")
 def links():
-    return "<script> alert('Hello world'); </script>"
+    return render_template("linkTable.html")
 
 if __name__ == "__main__":
     db.create_all() # creates a db if it does not exists

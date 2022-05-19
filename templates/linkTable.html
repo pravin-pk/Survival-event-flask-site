@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/leaderboard.css">
+    <!-- <script src="/static/leaderboard.js"></script> -->
+
+    <title>Coding links</title>
+</head>
+
+<body>
+    <!-- specify a table with a row describing the title of each column -->
+<table>
+    <tr>
+      <th>
+        Index
+      </th>
+      <th>
+        Competition links
+      </th>
+      <!-- <th>
+        Leader
+      </th> -->
+    </tr>
+    <tr class="driver" id="driver" name="driver">
+        <td>1</td>
+        <td><a href="link1">link 1</a></td>
+        <!-- <span><td></td></span> -->
+    </tr>
+  </table>
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault(alert("Right Click Disabled! "))); // Disabling Right click
+</script>
+</body>
+</html>
