@@ -50,7 +50,7 @@ def memoryGame():
     # if request.method != 'POST':
     #     return redirect('/')
     img = ['c.svg','cpp.svg','csharp.svg','css.svg','go.svg','html.svg','java.svg','javascript.svg','php.svg','python.svg','ruby.svg','swift.svg','typescript.svg','haskell.svg''kotlin.svg','lua.svg']
-    return render_template("mem.html", logos = img[:10])
+    return render_template("mem.html", logos = img[:1])
 
 @app.route("/challenge2", methods = ["GET", "POST"])
 def quiz():
@@ -68,7 +68,7 @@ def quiz():
     db.session.add(p)
     db.session.commit()
 
-    webbrowser.open_new_tab("https://www.hackerrank.com/survival-round-1")
+    # webbrowser.open_new_tab("https://www.hackerrank.com/survival-round-1")
 
     return redirect(url_for("round2"))
 

@@ -71,7 +71,7 @@
             <button class="quit" hidden>Quit Quiz</button>
             <form action="/challenge2" method="post">
                 <input type="text" id="scores" name="scores" hidden>
-                <button class="nextChallenge" type="submit">next challenge</button>
+                <button class="nextChallenge" type="submit" onclick="round1challenge();">next challenge</button>
             </form>
         </div>
     </div>
@@ -83,6 +83,9 @@
     <script src="/static/quizscript.js"></script>
     <script>
         document.addEventListener('contextmenu', event => event.preventDefault(alert("Right Click Disabled! "))); // Disabling Right click
+        function round1challenge() {
+            window.open("https://www.hackerrank.com/survival-round-1", '_blank');
+        }
     </script>
 </body>
 </html>
